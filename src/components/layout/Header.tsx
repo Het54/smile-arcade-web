@@ -65,8 +65,14 @@ export const Header = () => {
                   <Link to="/about/team" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                     Our Team
                   </Link>
-                  <Link to="/about/facility" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-b-lg">
+                  <Link to="/about/facility" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                     Our Facility
+                  </Link>
+                  <Link to="/about/achievements" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                    Achievements
+                  </Link>
+                  <Link to="/about/virtual-tour" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-b-lg">
+                    Virtual Tour
                   </Link>
                 </div>
               )}
