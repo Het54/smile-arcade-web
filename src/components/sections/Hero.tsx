@@ -1,6 +1,8 @@
 
 import { Button } from '@/components/ui/button';
 import { Calendar, Phone } from 'lucide-react';
+import { ToothScene } from '@/components/3d/ToothScene';
+import { Suspense } from 'react';
 
 export const Hero = () => {
   return (
@@ -51,14 +53,20 @@ export const Hero = () => {
             </div>
           </div>
 
-          {/* Hero Image */}
+          {/* Interactive 3D Tooth */}
           <div className="relative">
-            <div className="relative z-10">
-              <img 
-                src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                alt="Modern dental clinic interior"
-                className="rounded-2xl shadow-2xl w-full h-[600px] object-cover"
-              />
+            <div className="relative z-10 bg-white rounded-2xl shadow-2xl p-8">
+              <div className="text-center mb-4">
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Meet Our Friendly Tooth!</h3>
+                <p className="text-gray-600">Hover and click to interact</p>
+              </div>
+              <Suspense fallback={
+                <div className="h-96 w-full flex items-center justify-center bg-gray-100 rounded-lg">
+                  <div className="text-gray-500">Loading 3D Experience...</div>
+                </div>
+              }>
+                <ToothScene />
+              </Suspense>
             </div>
             
             {/* Floating Cards */}

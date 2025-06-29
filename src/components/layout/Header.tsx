@@ -13,14 +13,14 @@ export const Header = () => {
   const isActive = (path: string) => location.pathname === path;
 
   const services = [
-    'Orthodontics',
-    'Oral Surgery',
-    'Conservative Dentistry',
-    'Prosthodontics',
-    'Periodontics',
-    'Laser Dentistry',
-    'Pediatric Dentistry',
-    'Root Canal Treatment'
+    { name: 'Orthodontics', path: '/services/orthodontics' },
+    { name: 'Oral Surgery', path: '/services/oral-surgery' },
+    { name: 'Conservative Dentistry', path: '/services/conservative-dentistry' },
+    { name: 'Prosthodontics', path: '/services/prosthodontics' },
+    { name: 'Periodontics', path: '/services/periodontics' },
+    { name: 'Laser Dentistry', path: '/services/laser-dentistry' },
+    { name: 'Pediatric Dentistry', path: '/services/pediatric-dentistry' },
+    { name: 'Root Canal Treatment', path: '/services/root-canal-treatment' }
   ];
 
   return (
@@ -95,13 +95,13 @@ export const Header = () => {
                 >
                   {services.map((service, index) => (
                     <Link 
-                      key={service} 
-                      to={`/services/${service.toLowerCase().replace(/\s+/g, '-')}`}
+                      key={service.name} 
+                      to={service.path}
                       className={`block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 ${
                         index === 0 ? 'rounded-t-lg' : index === services.length - 1 ? 'rounded-b-lg' : ''
                       }`}
                     >
-                      {service}
+                      {service.name}
                     </Link>
                   ))}
                 </div>
@@ -145,7 +145,7 @@ export const Header = () => {
             <div className="px-4 py-2 space-y-2">
               <Link to="/" className="block py-2 text-gray-700 hover:text-blue-600">Home</Link>
               <Link to="/about" className="block py-2 text-gray-700 hover:text-blue-600">About Us</Link>
-              <Link to="/services" className="block py-2 text-gray-700 hover:text-blue-600">Services</Link>
+              <Link to="/services/orthodontics" className="block py-2 text-gray-700 hover:text-blue-600">Services</Link>
               <Link to="/lifestyle" className="block py-2 text-gray-700 hover:text-blue-600">Dental Lifestyle</Link>
               <Link to="/wedding-smile" className="block py-2 text-gray-700 hover:text-blue-600">Wedding-Ready Smile</Link>
               <Link to="/contact" className="block py-2 text-gray-700 hover:text-blue-600">Contact</Link>
