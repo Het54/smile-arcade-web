@@ -94,7 +94,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename="/smile-arcade-web">
         <div className="flex flex-col min-h-screen">
           <Header />
           <main className="flex-grow">
