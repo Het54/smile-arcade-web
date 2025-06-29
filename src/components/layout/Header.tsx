@@ -39,31 +39,23 @@ export const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
-            <Link 
-              to="/" 
-              className={`text-gray-700 hover:text-blue-600 transition-colors ${isActive('/') ? 'text-blue-600 font-medium' : ''}`}
-            >
-              Home
-            </Link>
             
             {/* About Dropdown */}
             <div className="relative group">
-              <button 
+              <Link 
+                to="/about"
                 className="flex items-center text-gray-700 hover:text-blue-600 transition-colors"
                 onMouseEnter={() => setIsAboutOpen(true)}
                 onMouseLeave={() => setIsAboutOpen(false)}
               >
                 About Us <ChevronDown className="ml-1 h-4 w-4" />
-              </button>
+              </Link>
               {isAboutOpen && (
                 <div 
-                  className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border z-50"
+                  className="absolute top-full left-0 w-48 bg-white rounded-lg shadow-lg border z-50"
                   onMouseEnter={() => setIsAboutOpen(true)}
                   onMouseLeave={() => setIsAboutOpen(false)}
                 >
-                  <Link to="/about" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-t-lg">
-                    Our Story
-                  </Link>
                   <Link to="/about/team" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                     Our Team
                   </Link>
@@ -91,7 +83,7 @@ export const Header = () => {
               </button>
               {isServicesOpen && (
                 <div 
-                  className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border z-50"
+                  className="absolute top-full left-0 w-56 bg-white rounded-lg shadow-lg border z-50"
                   onMouseEnter={() => setIsServicesOpen(true)}
                   onMouseLeave={() => setIsServicesOpen(false)}
                 >
