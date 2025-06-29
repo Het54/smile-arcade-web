@@ -20,7 +20,9 @@ export const Header = () => {
     { name: 'Periodontics', path: '/services/periodontics' },
     { name: 'Laser Dentistry', path: '/services/laser-dentistry' },
     { name: 'Pediatric Dentistry', path: '/services/pediatric-dentistry' },
-    { name: 'Root Canal Treatment', path: '/services/root-canal-treatment' }
+    { name: 'Sedation Dentistry', path: '/services/sedation-dentistry' },
+    { name: 'Root Canal Treatment', path: '/services/root-canal-treatment' },
+    { name: 'Brushing Techniques', path: '/services/brushing-techniques' }
   ];
 
   return (
